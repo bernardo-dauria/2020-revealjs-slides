@@ -27,7 +27,7 @@ A level-two header
 ------------------
 
 ```markdown
-&ge; this is a block quote
+> this is a block quote
 > made of many lines
 ```
 
@@ -59,6 +59,11 @@ made of many lines
 ------------------
 
 Use 4 spaces or a tab to include a block text as it is.
+
+```markdown
+␣␣␣␣> this is a block quote
+␣␣␣␣made of many lines
+```
 
 &blank;&blank;&blank;&blank;> this is a block quote  
 &blank;&blank;&blank;&blank;made of many lines
