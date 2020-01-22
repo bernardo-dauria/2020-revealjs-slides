@@ -61,8 +61,8 @@ made of many lines
 Use 4 spaces or a tab to include a block text as it is.
 
 ```markdown
-    > this is a block quote  
-    made of many lines
+&blank;&blank;&blank;&blank;> this is a block quote  
+&blank;&blank;&blank;&blank;made of many lines
 ```
 
 . . .
@@ -78,8 +78,9 @@ Begin with a row of three or more tildes (`~`) and you get a _fenced_ code block
 
 ```markdown
 ~~~~~~~
-> this is a block quote  
-made of many lines
+if (a > 3) {
+  moveShip(5 * gravity, DOWN);
+}
 ~~~~~~~
 ```
 
@@ -88,8 +89,9 @@ made of many lines
 this is the result
 
 ~~~~~~~
-> this is a block quote  
-made of many lines
+if (a > 3) {
+  moveShip(5 * gravity, DOWN);
+}
 ~~~~~~~
 
 ------------------
