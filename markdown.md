@@ -28,19 +28,23 @@ A level-two header
 
 ```markdown
 > this is a block quote
-> made of many lines 1
+> made of many lines
 ```
 
 > this is a block quote
-> made of many lines 1
+> made of many lines
 
-. . .
+
+------------------
 
 This _lazy_ way to write it gives the same result
 ```markdown
 >  this is a block quote
-   made of many lines
+made of many lines
 ```
+
+>  this is a block quote
+made of many lines
 
 # Verbatim (code) blocks
 
