@@ -14,17 +14,6 @@ A level-two header
 ------------------
 ```
 
-. . .
-
-this is the result
-
-A level-one header
-==================
-
-A level-two header
-------------------
-
-
 ## ATX-style headers
 
 ```markdown
