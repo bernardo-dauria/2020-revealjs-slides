@@ -27,7 +27,7 @@ A level-two header
 ------------------
 
 ```markdown
-> this is a block quote
+&ge; this is a block quote
 > made of many lines
 ```
 
@@ -43,7 +43,7 @@ this is the result
 
 This _lazy_ way to write it gives the same result
 ```markdown
->  this is a block quote
+> this is a block quote
 made of many lines
 ```
 
@@ -60,10 +60,8 @@ made of many lines
 
 Use 4 spaces or a tab to include a block text as it is.
 
-```markdown
 &blank;&blank;&blank;&blank;> this is a block quote  
 &blank;&blank;&blank;&blank;made of many lines
-```
 
 . . .
 
