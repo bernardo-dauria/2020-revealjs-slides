@@ -30,6 +30,8 @@ A level-two header
 > this is a block quote
 > made of many lines
 ```
+. . .
+this is the result
 
 > this is a block quote
 > made of many lines
@@ -42,6 +44,8 @@ This _lazy_ way to write it gives the same result
 >  this is a block quote
 made of many lines
 ```
+. . .
+this is the result
 
 >  this is a block quote
 made of many lines
@@ -54,19 +58,31 @@ Use 4 spaces or a tab to include a block text as it is.
 
 ```markdown
     > this is a block quote  
-      made of many lines
+    made of many lines
 ```
-
 . . .
+this is the result
+
+    > this is a block quote  
+    made of many lines
+
+------------------
 
 Begin with a row of three or more tildes (`~`) and you get a _fenced_ code block.
 
 ```markdown
 ~~~~~~~
 > this is a block quote  
-  made of many lines
+made of many lines
 ~~~~~~~
 ```
+. . .
+this is the result
+
+~~~~~~~
+> this is a block quote  
+made of many lines
+~~~~~~~
 
 ------------------
 
@@ -78,9 +94,7 @@ x <- 1:10;
 print("hello");
 ```
 ````
-
 . . .
-
 this is the result
 
 ```r
