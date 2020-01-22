@@ -14,6 +14,17 @@ A level-two header
 ------------------
 ```
 
+. . .
+
+this is the result
+
+A level-one header
+==================
+
+A level-two header
+------------------
+
+
 ## ATX-style headers
 
 ```markdown
@@ -64,9 +75,6 @@ Use 4 spaces or a tab to include a block text as it is.
 ␣␣␣␣> this is a block quote
 ␣␣␣␣made of many lines
 ```
-
-&blank;&blank;&blank;&blank;> this is a block quote  
-&blank;&blank;&blank;&blank;made of many lines
 
 . . .
 
