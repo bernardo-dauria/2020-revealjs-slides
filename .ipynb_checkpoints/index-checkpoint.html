@@ -119,38 +119,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1">&gt;<span class="dt"> this is a block quote</span></a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="dt">&gt; made of many lines</span></a></code></pre></div>
+<div class="fragment">
+<p>this is the result</p>
 <blockquote>
 <p>this is a block quote made of many lines</p>
 </blockquote>
-<div class="fragment">
+</div>
+</section><section class="slide level2">
+
 <p>This <em>lazy</em> way to write it gives the same result</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" title="1">&gt;<span class="dt">  this is a block quote</span></a>
-<a class="sourceLine" id="cb4-2" title="2"><span class="dt">   made of many lines</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-2" title="2"><span class="dt">made of many lines</span></a></code></pre></div>
+<div class="fragment">
+<p>this is the result</p>
+<blockquote>
+<p>this is a block quote made of many lines</p>
+</blockquote>
 </div>
 </section></section>
 <section><section id="verbatim-code-blocks" class="title-slide slide level1"><h1>Verbatim (code) blocks</h1></section><section class="slide level2">
 
 <p>Use 4 spaces or a tab to include a block text as it is.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1"><span class="bn">    &gt; this is a block quote  </span></a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="bn">      made of many lines</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1">&blank;&blank;&blank;&blank;&gt; this is a block quote  </a>
+<a class="sourceLine" id="cb5-2" title="2">&blank;&blank;&blank;&blank;made of many lines</a></code></pre></div>
 <div class="fragment">
+<p>this is the result</p>
+<pre><code>&gt; this is a block quote  
+made of many lines</code></pre>
+</div>
+</section><section class="slide level2">
+
 <p>Begin with a row of three or more tildes (<code>~</code>) and you get a <em>fenced</em> code block.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" title="1">~~~~~~~</a>
-<a class="sourceLine" id="cb6-2" title="2">&gt;<span class="dt"> this is a block quote</span>  </a>
-<a class="sourceLine" id="cb6-3" title="3"><span class="dt">  made of many lines</span></a>
-<a class="sourceLine" id="cb6-4" title="4"><span class="dt">~~~~~~~</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" title="1">~~~~~~~</a>
+<a class="sourceLine" id="cb7-2" title="2">if (a &gt; 3) {</a>
+<a class="sourceLine" id="cb7-3" title="3">  moveShip(5 * gravity, DOWN);</a>
+<a class="sourceLine" id="cb7-4" title="4">}</a>
+<a class="sourceLine" id="cb7-5" title="5">~~~~~~~</a></code></pre></div>
+<div class="fragment">
+<p>this is the result</p>
+<pre><code>if (a &gt; 3) {
+  moveShip(5 * gravity, DOWN);
+}</code></pre>
 </div>
 </section><section class="slide level2">
 
 <p>To highlight specific code formatting use:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" title="1"><span class="bn">```r</span></a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="bn">x &lt;- 1:10;</span></a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="bn">print(&quot;hello&quot;);</span></a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" title="1"><span class="bn">```r</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="bn">x &lt;- 1:10;</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="bn">print(&quot;hello&quot;);</span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="bn">```</span></a></code></pre></div>
 <div class="fragment">
 <p>this is the result</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>;</a>
-<a class="sourceLine" id="cb8-2" title="2"><span class="kw">print</span>(<span class="st">&quot;hello&quot;</span>);</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>;</a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="kw">print</span>(<span class="st">&quot;hello&quot;</span>);</a></code></pre></div>
 </div>
 </section></section>
 <section><section id="columns" class="title-slide slide level1"><h1>Columns</h1></section><section id="lists" class="slide level2">
