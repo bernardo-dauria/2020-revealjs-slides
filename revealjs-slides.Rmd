@@ -1,0 +1,235 @@
+---
+title: "R Presentation <br>reveal-js"
+bibliography: bibliography.bib
+csl: institute-of-mathematical-statistics.csl
+output:
+  revealjs::revealjs_presentation:
+    theme: sky
+    highlight: pygments
+    center: true
+    increment: true
+---
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+# Example of slides
+
+## Slide with Bullets {data-transition="zoom" data-background=#ff0000 incremental=true}
+
+- This is the first to be shown [@R4DS; @ggplot2].
+
+- This is the second to be shown
+
+> - This is not incremental
+> - Neither this one
+
+## Slide with Bullets {data-transition="zoom" data-background=#00ff00}
+<ul>
+<li class="fragment fade-out" data-fragment-index="1">fade-out 1</li>
+<li class="fragment fade-out" data-fragment-index="3">fade-out 3</li>
+<li class="fragment fade-out" data-fragment-index="2">fade-out 2</li>
+</ul>
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+Here the code that produces the plot is hidden
+
+```{r, echo=FALSE, out.height = "350px"}
+plot(cars)
+```
+
+# Transitions
+
+## Test of different type of transitions
+```{js echo=FALSE}
+var my_data="Reveal JS";
+``` 
+<p class="fragment grow fade-in" data-fragment-index="1">grow</p>
+
+<p class="fragment shrink" data-fragment-index="3">shrink</p>
+
+<p class="fragment fade-out" data-fragment-index="2">fade-out</p>
+
+<p class="fragment fade-up" data-fragment-index="4">fade-up (also down, left and right!)</p>
+
+<p>
+<span style="display: inline-block;" class="fragment fade-right" data-fragment-index="5">fade-right, </span>
+<span style="display: inline-block;" class="fragment fade-up" data-fragment-index="6">up, </span>
+<span style="display: inline-block;" class="fragment fade-down" data-fragment-index="7">down, </span>
+<span style="display: inline-block;" class="fragment fade-left" data-fragment-index="8">left</span>
+</p>
+						
+<p class="fragment fade-up" data-fragment-index="9">fades in, then out when we move to the next step</p>
+
+<p class="fragment" data-fragment-index="10">again fade-in</p>
+
+# Slides with dynamic plots
+
+## Plotly graph
+```{r, include=FALSE}
+library(plotly)
+```
+```{r echo=FALSE}
+
+trace_0 <- rnorm(100, mean = 5)
+trace_1 <- rnorm(100, mean = 0)
+trace_2 <- rnorm(100, mean = -5)
+x <- c(1:100)
+
+data <- data.frame(x, trace_0, trace_1, trace_2)
+
+p <- plot_ly(data, x = ~x, y = ~trace_0, name = 'trace 0', type = 'scatter', mode = 'lines') %>%
+  add_trace(y = ~trace_1, name = 'trace 1', mode = 'lines+markers') %>%
+  add_trace(y = ~trace_2, name = 'trace 2', mode = 'markers')
+
+htmlwidgets::saveWidget(p,'plotly.html')
+```
+
+<style>
+  .p_iframe iframe {
+    width:90%;
+    height:576px;
+}
+</style>
+
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly.html"></iframe>
+</div>
+
+## r2d3 graph
+```{r setup, echo=FALSE}
+library(r2d3)
+bars <- c(10, 20, 30, 15, 19, 44, 2)
+```
+
+```{d3 data=bars, options=list(color = 'orange'), out.width = "400px", out.height = "200px"}
+svg.selectAll('rect')
+  .data(data)
+  .enter()
+    .append('rect')
+      .attr('width', d => d * 10)
+      .attr('height', '20px')
+      .attr('y', (d, i) => i * 22)
+      .attr('fill', options.color);
+```
+
+## r2d3 graph with external file
+```{r, out.width = "400px", out.height = "200px"}
+library(r2d3)
+r2d3(data=c(0.3, 0.6, 0.8, 0.95, 0.40, 0.20), script = "d3-barchart.js")
+```
+
+## Inserting our pie-chart
+<div class="p_iframe">
+<iframe frameborder="0" seamless='seamless' scrolling=no src="d3-piechart.html"></iframe>
+</div>
+
+# Few more things
+
+## Embedding javascript
+```html
+<div id="testjs">Hello</div>
+```  
+<div id="testjs">Hello</div>
+```{js}
+function change_color(){
+  var div=document.getElementById('testjs')
+  div.style.color='green';
+  div.style.fontSize = "150%";
+  div.innerHTML = "Hello " + my_data;
+}
+```  
+```html
+<button onclick="change_color">Change color</button>
+```  
+```{css echo=FALSE}
+.btn {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+```  
+<button type="button" class="btn" onclick="change_color()">Change color and font size</button>
+
+## Embedding CSS
+Some embedded CSS code
+```{css}
+#testcss {
+  color: red;
+}
+```
+
+```html
+<div id="testcss">Hello</div>
+```
+<div id="testcss">Hello</div>
+
+# Equations
+
+## getting started
+
+We can write fractions: $\frac{2}{3}$. We can also handle things like estimated population growth rate, e.g., $\hat{\lambda}=1.02$. And, $\sqrt{4}=2$.
+
+$$\alpha, \beta,  \gamma, \Gamma$$
+
+$$a \pm b$$
+$$x \ge 15$$
+$$a_i \ge 0~~~\forall i$$
+
+## Matrix
+
+$$A_{m,n} =
+ \begin{pmatrix}
+  a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+ \end{pmatrix}$$
+ 
+## Referencing equations
+
+```latex
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}\tag{1}
+\end{equation} 
+```
+
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}\tag{1}
+\end{equation}
+
+Refer to it using ```$\eqref{eq:sample}$```, e.g., see $\eqref{eq:sample}$
+
+# References
+
+##
