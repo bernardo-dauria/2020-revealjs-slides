@@ -8,6 +8,7 @@ output:
     highlight: pygments
     center: true
     increment: true
+    self_contained: false  # important to keep plotly.html as an external file and not embedded 
 ---
 
 ## R Markdown
@@ -93,18 +94,8 @@ p <- plot_ly(data, x = ~x, y = ~trace_0, name = 'trace 0', type = 'scatter', mod
   add_trace(y = ~trace_2, name = 'trace 2', mode = 'markers')
 
 htmlwidgets::saveWidget(p,'plotly.html')
+knitr::include_url("plotly.html", height = "576px")
 ```
-
-<style>
-  .p_iframe iframe {
-    width:90%;
-    height:576px;
-}
-</style>
-
-<div class="p_iframe">
-<iframe frameborder="0" seamless='seamless' scrolling=no src="plotly.html"></iframe>
-</div>
 
 ## r2d3 graph
 ```{r setup, echo=FALSE}
