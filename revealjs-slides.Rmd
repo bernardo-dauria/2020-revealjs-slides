@@ -1,5 +1,5 @@
 ---
-title: "R Presentation <br>reveal-js"
+title: "R Presentation <br>reveal-js<p style='text-transform: none;'><small>February 24th, 2021</small></p>"
 bibliography: bibliography.bib
 csl: institute-of-mathematical-statistics.csl
 output:
